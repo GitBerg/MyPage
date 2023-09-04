@@ -45,6 +45,7 @@ input{
     border-bottom: 1px solid black;
     border-radius: 4px 4px 0 0;
     transition: padding-top 0.3s ease, padding-bottom 0.3s ease;
+    background-color: #F5F5F5;
     :focus{
         padding-top: 18px;
         padding-bottom: 2px;
@@ -93,5 +94,20 @@ form{
             filter: brightness(90%);
         }
     }
+}
+`
+
+export const Footer = styled.footer`
+position: absolute;
+bottom: 0;
+width: 100%;
+height: 60px;
+background-color: #159A9C;
+border-top: 2px solid rgba(255,255,255,0.2);
+display: flex;
+justify-content: center;
+align-items: center;
+p{
+    color: white;
 }
 `

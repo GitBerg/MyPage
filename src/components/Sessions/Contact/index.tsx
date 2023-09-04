@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Container } from "./styles";
+import { Container, Footer } from "./styles";
 import { sendContactForm } from "@/lib/api";
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -129,6 +129,9 @@ export default function ContactContainer() {
                         <button type="submit">Enviar</button>
                     </form>
                 </div>
+                <Footer>
+                    <p>Copyright © 2023 Gutemberg Filho</p>
+                </Footer>
             </Container>
         </>
 
