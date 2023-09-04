@@ -35,7 +35,7 @@ export const database = {
         "repository": "https://github.com/GitBerg/Food_Commerce",
         "url": "",
         "imgs": [fc1, fc2, fc3, fc4],
-        "description": "YelpCamp is a place to share your yelp experience! An application designed to promote interaction between users and find and share possible points of interest.",
+        "description": "The Food Commerce project was developed to improve my skills with ReactJs and the use of ContextApi to traffic Props between components. In this project, three pages were developed, namely: Product selection, cart and order completion.",
         "tecs": ["ReactJS", "Typescript", "Styled-components", "NodeJS", "Prisma"],
     },
     "orderApp": { 
@@ -43,7 +43,7 @@ export const database = {
         "repository": "https://github.com/GitBerg/OrderApp",
         "url": "",
         "imgs": [op1, op2, op3, op4],
-        "description": "YelpCamp is a place to share your yelp experience! An application designed to promote interaction between users and find and share possible points of interest.",
+        "description": "The Order App project was developed and used as my final project. In it we have a mobile application whose objective is to take orders and view the traffic of orders made during the days. It is possible to register a menu and it has an exclusive page for viewing daily data.",
         "tecs": ["React-Native", "FireBase", "Expo"],
     },
 }
