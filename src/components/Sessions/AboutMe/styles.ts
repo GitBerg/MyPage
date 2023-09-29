@@ -80,7 +80,7 @@ span{
     .card{
         padding: 0 20px;
         width: clamp(200px, 95%, 450px);
-        height: clamp(200px, 40%, 250px);
+        height: clamp(220px, 40%, 280px);
         h2{
             color: #159A9C;
             font-size: clamp(1.5rem, 2vw, 2.5rem); 
@@ -103,8 +103,8 @@ span{
         align-items: center;
         align-self: center;
         .img{
-        width: clamp(250px, 75%, 450px);
-        height: clamp(250px, 75%, 450px);
+        width: clamp(250px, 50%, 450px);
+        height: clamp(250px, 50%, 450px);
         border-radius: 50%;
         border: 3px solid #159A9C ;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
@@ -116,7 +116,7 @@ span{
     }
 
     .skills{
-        width: clamp(200px, 60%, 400px);
+        width: clamp(200px, 70%, 400px);
         height: clamp(140px, 60%, 150px);
         display: flex;
         flex-direction: column;
