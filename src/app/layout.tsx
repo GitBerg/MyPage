@@ -13,6 +13,11 @@ export default function RootLayout({
   return (
     <html style={{ scrollBehavior: 'smooth', fontFamily: 'Roboto' }} lang='en'>
       <head>
+        <meta name="author" content="Gutemberg Silva Filho" />
+        <meta http-equiv="content-language" content="pt-br, en-US" />
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta name="description" content="Página do meu Portfólio" />
+        <meta name="keywords" content="portfolio, contratar, programador, dev"></meta>
         <title>Guttu Portfolio</title>
       </head>
       <body style={{ margin: 0, padding: 0, boxSizing: 'border-box', userSelect: 'none' }}>

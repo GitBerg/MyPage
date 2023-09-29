@@ -116,7 +116,7 @@ span{
     }
 
     .skills{
-        width: clamp(200px, 70%, 400px);
+        width: clamp(200px, 70%, 300px);
         height: clamp(140px, 60%, 150px);
         display: flex;
         flex-direction: column;

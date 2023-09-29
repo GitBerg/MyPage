@@ -96,7 +96,6 @@ export default function ContactContainer() {
                             type="text"
                             id="from"
                             {...register("from")}
-                            role="presentation"
                             value={emailData.from}
                             onChange={handleInputChange}
                             className={emailData.from?"has-value":""}
