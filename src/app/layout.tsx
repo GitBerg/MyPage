@@ -11,7 +11,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html style={{ scrollBehavior: 'smooth', fontFamily: 'Roboto' }}>
+    <html style={{ scrollBehavior: 'smooth', fontFamily: 'Roboto' }} lang='en'>
+      <head>
+        <title>Guttu Portfolio</title>
+      </head>
       <body style={{ margin: 0, padding: 0, boxSizing: 'border-box', userSelect: 'none' }}>
         <Provider store={store}>
             <StyledComponentsRegistry>{children}</StyledComponentsRegistry>

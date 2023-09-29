@@ -90,7 +90,7 @@ export default function ContactContainer() {
                             className={emailData.sender?"has-value":""}
                             required
                         />
-                        <label htmlFor="from">Your name</label>
+                        <label htmlFor="sender">Your name</label>
                         <input
                             autoComplete="off"
                             type="text"
@@ -126,7 +126,7 @@ export default function ContactContainer() {
                             className={emailData.text?"has-value":""}
                             required
                         />
-                        <label htmlFor="text" id="text">Message</label>
+                        <label htmlFor="text">Message</label>
                         <button type="submit">Enviar</button>
                     </form>
                 </div>

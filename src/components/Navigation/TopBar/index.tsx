@@ -19,10 +19,10 @@ export default function TopBar(){
             </ul>
             <span className="logo">GF</span>
             <div className="social">
-                <a href="https://github.com/Gitberg" target="_blank" className="icon"><AiFillGithub/></a>
-                <a href="https://br.linkedin.com/in/gutembergfilho" target="_blank" className="icon"><AiFillLinkedin/></a>
-                <a href="https://www.instagram.com/guttos_f/" target="_blank" className="icon"><AiOutlineInstagram/></a>
-                <a href="https://drive.google.com/uc?export=download&id=1dpz23xoxjnCUY54wD1lDWcfgKC8d7KW9" className="icon"><AiOutlinePaperClip/></a>
+                <a href="https://github.com/Gitberg" title="GitHub" target="_blank" className="icon"><AiFillGithub/></a>
+                <a href="https://br.linkedin.com/in/gutembergfilho" title="LinkedIn" target="_blank" className="icon"><AiFillLinkedin/></a>
+                <a href="https://www.instagram.com/guttos_f/" title="Instagram"  target="_blank" className="icon"><AiOutlineInstagram/></a>
+                <a href="https://drive.google.com/uc?export=download&id=1dpz23xoxjnCUY54wD1lDWcfgKC8d7KW9" title="Download CV" className="icon"><AiOutlinePaperClip/></a>
             </div>
         </Container>
     )
