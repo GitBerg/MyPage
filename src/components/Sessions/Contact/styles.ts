@@ -11,14 +11,18 @@ position: relative;
 font-family: Roboto;
 
 .container{
-    position: absolute;
-    top: 100px;
+    form{
+        position: relative; 
+        transform: translateY(50%);
+    }
 }
 
 h2{
     text-align: center;
     color: rgb(21, 154, 156);
-    font-size: 2.5rem;
+    font-size: 3rem;
+    margin-top: 0;
+    transform: translateY(200%);
 }
 
 label{
@@ -29,12 +33,8 @@ label{
     transition: all 0.3s ease;
 }
 
-label#text{
-    position: relative;
-    bottom: 10px;
-}
-
-input{
+input, textarea{
+    resize: none;
     width: 400px;
     height: 30px;
     padding: 0px 20px;
@@ -60,19 +60,30 @@ input:focus + label, .has-value + label {
     color: #159A9C;
 }
 
+textarea:focus + label{
+    transform: translateY(-27px);
+    padding-left: 10px;
+    font-size: 0.8rem;
+    color: #159A9C;
+}
+
+textarea:focus::placeholder{
+    color: gray;
+    transition: all 0.5s ease;
+}
+
+textarea::placeholder{
+    color: transparent;
+    transition: all 0.2s ease;
+}
+
 .has-value{
     padding-top: 18px;
     padding-bottom: 2px;
     border-bottom: 2px solid rgb(21, 154, 156);
 }
 
-textarea{
-    resize: none;
-    padding: 10px 20px;
-    font-size: 18px;
-    margin-bottom: 10px;
-    outline-color: rgb(21, 154, 156);
-}
+
 
 form{
     display: flex;

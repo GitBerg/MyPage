@@ -11,7 +11,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html style={{ scrollBehavior: 'smooth', fontFamily: 'Roboto', scrollSnapType: 'y mandatory' }}>
+    <html style={{ scrollBehavior: 'smooth', fontFamily: 'Roboto' }}>
       <body style={{ margin: 0, padding: 0, boxSizing: 'border-box', userSelect: 'none' }}>
         <Provider store={store}>
             <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
@@ -21,4 +21,4 @@ export default function RootLayout({
   )
 }
 
-//,
+//scrollSnapType: 'y mandatory'

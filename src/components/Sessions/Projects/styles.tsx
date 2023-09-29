@@ -55,21 +55,24 @@ flex-direction: column;
 font-family: Roboto;
 position: relative;
 z-index: 1;
-padding-top: 50px;
+
 
     h2{
-        font-size: 2rem;
+        font-size: 3rem;
         color:rgb(21, 154, 156);
-        margin: 15px 0;
+        margin-top: 0;
+        margin: 25px 0;
     }
 
     .content{
         width: 70%;
-        height:90%;
+        height:80%;
         background-color: rgb(0 0 0/5%);
         border-radius: 14px;
         display: flex;
         border: 1px solid rgb(255 255 255 / 15%);
+        position: relative;
+        overflow: hidden;
 
         .info-list{
             width: 25%;
@@ -103,7 +106,42 @@ padding-top: 50px;
             }
         }
     }
+
+
+    @media (max-width: 1440px) {
+        height: 100vh;
+        h2{
+            margin-top: 80px;
+            margin-bottom: 40px;
+            font-size: 3rem;
+        }
+        .content{
+            width: 80%;
+            height:75%;
+            /* margin-top: 80px; */
+        }
+    }
+
+    @media (max-width: 1024px) {
+        h2{
+            margin-top: 80px;
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        .content{
+            width: 95%;
+            height:75%;
+            .info-list{
+                .icon-name{
+                    font-size: 1.2rem;
+                    bottom: 3px;
+                }
+            }
+        }
+    }
 `
+
+
 
 
 const Card = styled.div`
@@ -121,7 +159,7 @@ const Card = styled.div`
     #img{
     width: 100%;
     height: 70%;
-    object-fit: cover;
+    object-fit: fill;
     object-position: left center;
     position: absolute;
     opacity: 0;
@@ -146,10 +184,11 @@ const Card = styled.div`
             font-size: 1.5rem;
         }
         p{
-            font-size: 1.1rem;
+            font-size: clamp(1rem, 1.5vw, 1.3rem); 
             letter-spacing: 1px;
             color: #002323;
             padding: 0px 30px;
+            margin: 0;
         }
     }
     #btns{
@@ -384,13 +423,14 @@ export const MyProjects = ({ showPage }: { showPage: boolean }) => {
 
     return (
         <Container id="projects">
+            <h2>My Projects</h2>
             {showPage &&
                 <motion.div
-                    initial={{ opacity: 0, y: -75 }}
+                    initial={{ opacity: 0, y: 75 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0, duration: 0.6 }}
                     className="content"
-                >
+                >   
                     <Card>
                         <div id="control">
                             <MdNavigateBefore className="icon" onClick={handlePreviousImage} />
@@ -416,7 +456,6 @@ export const MyProjects = ({ showPage }: { showPage: boolean }) => {
                     </Card>
                     <div className="info-list">
                         <ProjectList>
-                            <h2>My Projects</h2>
                             {
                                 Object.values(database).map((project, index) => [
                                     <li key={project.name} className={currentProject.name === project.name ? "active" : ""} onClick={() => handleSetCurrentProject(project, index)}>{project.name}</li>

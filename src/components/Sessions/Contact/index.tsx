@@ -114,7 +114,6 @@ export default function ContactContainer() {
                             required
                         />
                         <label htmlFor="subject">Subject</label>
-                        <label htmlFor="text" id="text">Message</label>
                         <textarea
                             id="text"
                             {...register("text")}
@@ -124,8 +123,10 @@ export default function ContactContainer() {
                             placeholder="Type your message here..."
                             value={emailData.text}
                             onChange={handleInputChange}
+                            className={emailData.text?"has-value":""}
                             required
                         />
+                        <label htmlFor="text" id="text">Message</label>
                         <button type="submit">Enviar</button>
                     </form>
                 </div>

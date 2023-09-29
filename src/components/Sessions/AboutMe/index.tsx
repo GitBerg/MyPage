@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Container } from "./styles";
-import img from '../../../../public/foto_perfil.jpg';
+import img from '../../../../public/foto_perfil.webp';
 
 import { RiJavascriptFill } from "react-icons/ri";
 import { BiLogoTypescript, BiLogoReact, BiLogoRedux,BiLogoHtml5, BiLogoCss3, BiLogoNodejs, BiLogoMongodb, BiLogoGit } from "react-icons/bi";
@@ -18,7 +18,7 @@ export default function AboutMeContainer() {
     
 
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
-        if(latest >= 0.25){
+        if(latest >= 0.15){
             setShowInfos(true)
             setShowNav(true)
         }else{

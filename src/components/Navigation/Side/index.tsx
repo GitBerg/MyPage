@@ -41,6 +41,13 @@ export function SideNavigation({isVisible}:any) {
         setActivate(!activate)
     }
 
+    const scrollTo = (pixels: number) => {
+        window.scrollTo({
+          top: pixels,
+          behavior: 'smooth',
+        });
+      };
+
     
     return (
         <Container>
@@ -49,7 +56,7 @@ export function SideNavigation({isVisible}:any) {
                 animate={ isVisible ? { opacity: 1, scale: 1 } : { opacity: 0 }}
                 transition={isVisible ?{ delay: 0, duration: 0.2 } : {delay: 0.4}}
                 className={`menu ${activate&&isVisible ? "active" : ""}`}>
-                <div className="toggle" onClick={handleActivate}><BiMenu className="icon" /><AiOutlineClose className="icon close" /></div>
+                <div className={`toggle ${isVisible ? "active" : ""}`} onClick={handleActivate}><BiMenu className="icon" /><AiOutlineClose className="icon close" /></div>
                 <li className={"home"}><a href="#welcome"><AiOutlineHome /></a></li>
                 <li className={"about"} ><a href="#about" style={info?{color:'#159A9C', transition: 'all 0.3s ease-in 150ms'}:{}}><TiInfoLargeOutline /></a></li>
                 <li className={"projects"} ><a href="#projects"  style={project?{color:'#159A9C', transition: 'all 0.3s ease-in 150ms'}:{}}><AiFillFolderOpen /></a></li>

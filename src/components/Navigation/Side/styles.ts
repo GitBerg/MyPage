@@ -82,7 +82,7 @@ export const Container = styled.div`
     align-items: center;
     width: 250px;
     height: 250px;
-    left: 0px;
+    left: -50px;
     top: 35%;
     z-index: 100;
     
@@ -93,6 +93,7 @@ export const Container = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        pointer-events: none;
         .icon{
             transition: all 0.3s;
         }
@@ -112,12 +113,12 @@ export const Container = styled.div`
             background: linear-gradient(145deg, #ffffff, #dcdcdc);
             box-shadow:  4px 4px 3px #b9b9b9,
              -4px -4px 3px #ffffff;
-             :active{
-                color: #c1a391;;
-                box-shadow: inset 4px 4px 12px #c5c5c5,
-                inset -4px -4px 12px #ffffff;
-                transition: color 0.1s linear;
-             }
+            :active{
+               color: #c1a391;;
+               box-shadow: inset 4px 4px 12px #c5c5c5,
+               inset -4px -4px 12px #ffffff;
+               transition: color 0.1s linear;
+            }
         }
         }   
         .home{
@@ -167,10 +168,17 @@ export const Container = styled.div`
         transition: all 0.3s;
     }
     }
-        
+        .toggle.active{
+            pointer-events: all;
+        }
     }
 
+
     .menu.active{
+        pointer-events: all;
+        a{
+            cursor: pointer;
+        }
         .icon{
             transform: rotate(90deg);
             transition: all 0.3s;
