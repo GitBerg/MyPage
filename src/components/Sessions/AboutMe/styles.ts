@@ -47,7 +47,7 @@ const gitFill = keyframes`
 `
 
 export const Container = styled.section`
-background: #F4F4F4;
+background: #F6F6F6;
 width: 100%;
 height: 75vh;
 display: flex;
