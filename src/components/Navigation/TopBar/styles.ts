@@ -23,6 +23,7 @@ export const Container = styled.nav`
     background: rgba(255,255,255,0.1);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
     border-bottom: 2px solid rgba(255,255,255,0.2);
+    overflow: hidden;
 
     ul{
         position: absolute;
@@ -176,14 +177,14 @@ export const Menu = styled.ul`
     opacity: 0;
     flex-direction: column;
     width: 100vw;
-    height: 100vh;
+    height:calc(100% - 70px);
     position: fixed;
     top: 70px;
     background-color: rgb(0 0 0/ 80%);
     z-index: 1000000000000000;
     overflow: hidden;
     li{
-        height: calc(100vh/8);
+        height: calc(100%/7);
         display: flex;
         justify-content: flex-start;
         align-items: center;

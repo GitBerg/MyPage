@@ -1,6 +1,6 @@
 "use client"
 
-import { Provider } from 'react-redux'
+import { Provider, useSelector } from 'react-redux'
 import StyledComponentsRegistry from '../lib/registry'
 import store from '@/redux/store'
 import "./styles.css"
@@ -9,9 +9,10 @@ import "./styles.css"
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode,
 }) {
   return (
+    
     <html style={{ scrollBehavior: 'smooth', fontFamily: 'Roboto' }} lang='en'>
       <head>
         <meta name="author" content="Gutemberg Silva Filho" />
@@ -21,12 +22,13 @@ export default function RootLayout({
         <meta name="keywords" content="portfolio, contratar, programador, dev"></meta>
         <title>Guttu Portfolio</title>
       </head>
-      <body>
-        <Provider store={store}>
+      <Provider store={store}>
+        <body>
             <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-        </Provider>
-      </body>
+        </body>
+      </Provider>
     </html>
+   
   )
 }
 
