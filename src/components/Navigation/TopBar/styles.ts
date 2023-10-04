@@ -1,4 +1,14 @@
-import styled from "styled-components";
+import styled, { keyframes }from "styled-components";
+
+const toGrow = keyframes`
+    from{
+        transform: translateX(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+`
 
 export const Container = styled.nav`
     display: flex;
@@ -102,6 +112,10 @@ export const Container = styled.nav`
         
     }
 
+    .menu{
+        display: none;
+    }
+
     @media (max-width: 1440px) {
         position: fixed;
     }
@@ -118,13 +132,78 @@ export const Container = styled.nav`
             right: 8vw;
         }
 }
-@media (max-width: 425px) {
+@media (max-width: 670px) {
         ul{
             display: none;
         }
         .social{
             display: none;
         }
+        .menu{
+        display: flex;
+        opacity: 1;
+        position: absolute;
+        right: 5%;
+        font-size: 30px;
+        cursor: pointer;
+        #close-icon{
+            position: absolute;
+            opacity: 0;
+            transition: all 0.2s ease;
+        }
+        transition: all 0.5s ease;
+        }
+        .menu.open{
+            transform: rotate(180deg);
+            #open-icon{
+                opacity: 0;
+                transition: all 0.2s ease;
+            }
+            #close-icon{
+                opacity: 1;
+                transition: all 0.2s ease;
+            }
+            transition: all 0.5s ease;
+        }
 }
+`
 
+export const Menu = styled.ul`
+    list-style: none;
+    display: none;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 70px;
+    background-color: rgb(0 0 0/ 80%);
+    z-index: 1000000000000000;
+    overflow: hidden;
+    li{
+        height: calc(100vh/8);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 20px;
+        border-bottom: 1px solid #f6f6f6;
+        a{
+            text-decoration: none;
+            color: #f6f6f6;
+            font-weight: 600;
+            font-size: 1.5rem;   
+            :hover{
+                color: #159A9C;
+                font-size: 1.7rem;
+            }
+        }
+    }
+    
+    @media (max-width: 670px) {
+        display: flex;
+        animation: ${toGrow} 0.2s ease-in;
+        animation-fill-mode:forwards
+    }
 `

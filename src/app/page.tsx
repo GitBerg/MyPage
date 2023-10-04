@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
       <Provider store={store}>
-        <div style={{ backgroundColor: '#1B2B36' }}>
+        <div style={{ backgroundColor: '#1B2B36' }}> 
           {trigger && <TransitionEffect />}
           <WelcomeContainer />
           <AboutMeContainer />

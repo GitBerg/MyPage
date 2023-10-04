@@ -3,6 +3,7 @@
 import { Provider } from 'react-redux'
 import StyledComponentsRegistry from '../lib/registry'
 import store from '@/redux/store'
+import "./styles.css"
 
 
 export default function RootLayout({
@@ -20,7 +21,7 @@ export default function RootLayout({
         <meta name="keywords" content="portfolio, contratar, programador, dev"></meta>
         <title>Guttu Portfolio</title>
       </head>
-      <body style={{ margin: 0, padding: 0, boxSizing: 'border-box', userSelect: 'none' }}>
+      <body>
         <Provider store={store}>
             <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
         </Provider>

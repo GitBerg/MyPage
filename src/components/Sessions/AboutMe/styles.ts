@@ -225,7 +225,11 @@ span{
     height: 75vh;
 }
 
-@media (max-height: 700px) {
+@media (max-height: 768px) {
+    height: 90vh;
+}
+
+@media (max-height: 600px) {
     height: 100vh;
 }
 

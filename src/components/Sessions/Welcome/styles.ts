@@ -10,6 +10,7 @@ scroll-snap-align: start;
 align-items: center;
 box-sizing: border-box;
 position: relative;
+overflow: hidden;
 
 .banner{
     z-index: 1;
@@ -76,6 +77,7 @@ position: relative;
             height: 100%;
             object-fit: fill;
             object-position: left ;
+            overflow: hidden;
         }
     }
 

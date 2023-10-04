@@ -55,6 +55,7 @@ flex-direction: column;
 font-family: Roboto;
 position: relative;
 z-index: 1;
+overflow: hidden;
 
 
     h2{

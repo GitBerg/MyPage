@@ -9,6 +9,7 @@ justify-content: center;
 scroll-snap-align: start;
 position: relative;
 font-family: Roboto;
+overflow: hidden;
 
 .container{
     form{
