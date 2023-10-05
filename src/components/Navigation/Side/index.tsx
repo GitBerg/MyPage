@@ -18,7 +18,7 @@ export function SideNavigation({isVisible}:any) {
 
 
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
-        if(latest >= 0.31 && latest <= 0.45){
+        if(latest >= 0.20 && latest <= 0.45){
             setInfo(true)
             setProject(false)
             setContact(false)
@@ -40,13 +40,6 @@ export function SideNavigation({isVisible}:any) {
     const handleActivate = () => {
         setActivate(!activate)
     }
-
-    const scrollTo = (pixels: number) => {
-        window.scrollTo({
-          top: pixels,
-          behavior: 'smooth',
-        });
-      };
 
     
     return (

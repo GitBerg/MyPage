@@ -12,8 +12,7 @@ export default function RootLayout({
   children: React.ReactNode,
 }) {
   return (
-    
-    <html style={{ scrollBehavior: 'smooth', fontFamily: 'Roboto' }} lang='en'>
+    <html style={{ fontFamily: 'Roboto', scrollBehavior: 'smooth' }} lang='en'>
       <head>
         <meta name="author" content="Gutemberg Silva Filho" />
         <meta http-equiv="content-language" content="pt-br, en-US" />
@@ -22,11 +21,11 @@ export default function RootLayout({
         <meta name="keywords" content="portfolio, contratar, programador, dev"></meta>
         <title>Guttu Portfolio</title>
       </head>
+      <body>
       <Provider store={store}>
-        <body>
             <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-        </body>
       </Provider>
+      </body>
     </html>
    
   )

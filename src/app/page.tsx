@@ -6,6 +6,7 @@ import ContactContainer from "@/components/Sessions/Contact";
 import { TransitionEffect } from "@/components/TransitionEffect";
 import { Provider, useSelector } from "react-redux";
 import store from "@/redux/store";
+import "./page.css"
 
 
 export default function Home() {
@@ -14,7 +15,7 @@ export default function Home() {
 
   return (
       <Provider store={store}>
-        <div style={{overflow: "scroll", width: "100vw", height: "100vh"}}> 
+        <div className="page"> 
           {trigger && <TransitionEffect />}
           <WelcomeContainer />
           <AboutMeContainer />

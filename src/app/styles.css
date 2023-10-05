@@ -4,8 +4,14 @@ body{
     box-sizing: 'border-box';
     user-select: 'none';
     width: 100%;
-    overflow: hidden;
 }
 *::-webkit-scrollbar {
     display: none;
   }
+
+
+  @media (max-width: 670px) {
+    body{
+       overflow: hidden;
+    }
+   }
