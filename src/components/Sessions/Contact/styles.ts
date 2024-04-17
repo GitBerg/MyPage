@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.section`
 background: #F6F6F6;
-width: 100%;
+width: 100vw;
 height: 100vh;
 display: flex;
 justify-content: center;
@@ -12,10 +12,36 @@ font-family: Roboto;
 overflow: hidden;
 
 .container{
+    overflow: hidden;
     form{
-        position: relative; 
-        transform: translateY(50%);
+    display: flex;
+    flex-direction: column;
+    position: relative; 
+    transform: translateY(50%);
+    width: 480px;
+    button{
+        height: 40px;
+        background-color: #49AF41;
+        outline-style: none;
+        border: 0;
+        cursor: pointer;
+        color: white;
+        font-size: 1.2rem;
+        border-radius: 4px;
+        width: 100%;
+        :hover{
+            filter: brightness(110%);
+        }
+        :active{
+            filter: brightness(90%);
+        }
     }
+
+    @media (max-width: 500px) {
+        width: 85vw;
+    }
+}
+
 }
 
 h2{
@@ -36,7 +62,7 @@ label{
 
 input, textarea{
     resize: none;
-    width: 400px;
+    width: 100%;
     height: 30px;
     padding: 0px 20px;
     font-size: 18px;
@@ -82,30 +108,6 @@ textarea::placeholder{
     padding-top: 18px;
     padding-bottom: 2px;
     border-bottom: 2px solid rgb(21, 154, 156);
-}
-
-
-
-form{
-    display: flex;
-    flex-direction: column;
-
-    button{
-        height: 40px;
-        background-color: #49AF41;
-        outline-style: none;
-        border: 0;
-        cursor: pointer;
-        color: white;
-        font-size: 1.2rem;
-        border-radius: 4px;
-        :hover{
-            filter: brightness(110%);
-        }
-        :active{
-            filter: brightness(90%);
-        }
-    }
 }
 `
 
