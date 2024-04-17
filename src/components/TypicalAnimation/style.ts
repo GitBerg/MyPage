@@ -7,6 +7,7 @@ export const Container = styled.h2`
         color: #002323;
         width: 100%;
         white-space: nowrap;
+        
         div{
             display: flex;
             align-items: center;
@@ -22,4 +23,12 @@ export const Container = styled.h2`
 
          }
         } 
+
+        @media (max-width: 425px){
+          div{
+            .typical{
+              font-size: 1rem;
+            }
+          }
+        }
 `

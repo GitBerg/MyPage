@@ -6,8 +6,8 @@ import { memo } from "react";
 const TypicalAnimation = () => {
     return (
         <Container>
-            Hi, My name is Gutemberg Filho
-            <div>I{"\'"}m a&nbsp;
+            <p>Hi, My name is Gutemberg Filho</p>
+            <div><span className="initial">I{"\'"}m a&nbsp;</span>
                 <ReactTypical
                     className="typical"
                     steps={['Web Developer💻', 2000, 'Frontend Developer🎨', 2000, 'React Developer⚛️', 2000, 'Gamer🎮', 2000,]}

@@ -35,6 +35,10 @@ position: relative;
             color: #159A9C;
             text-align: center;
          }
+         .initial{
+              font-size: 1.5rem;
+              color: #002323;
+            }
         h1{
             text-align: center;
             margin: 10px 0 0 0;
@@ -60,7 +64,6 @@ position: relative;
         }
         .line{
            margin: 0px;
-
          }
         } 
     }
@@ -121,7 +124,7 @@ position: relative;
         .title{
             width: 70%;
             span{
-                    font-size: 4rem;
+                    font-size: 4.5rem;
                 }
             h1{
                 font-size: 2rem;
@@ -130,29 +133,39 @@ position: relative;
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 500px) {
     .banner{
-        width: 100%;
         overflow: hidden;
+        width: 100vw;
         .title{
-            padding-left: 10px;
-            width: 60%;
+            left: 0px;
+            width: 100%;
             z-index: 1;
-            span{
-                    font-size: 3rem;
-                }
-            h1{
-                font-size: 1.5rem;
+            text-align: center;
+            p{
+                font-size: 1.4rem;
             }
+            .initial{
+              font-size: 1.2rem;
+            }
+            h2{
+                div{
+                    .typical{
+                        font-size: 2rem;
+                    }
+                }
+            }
+            
         }
         .image{
-            width: 50%;
+            width: 0%;
             z-index: 0;
             .img{
                 position: absolute;
                 left: 150px;
                 object-fit: cover;
                 object-position: left ;
+                opacity: 0.4;
             }
         }
     }
