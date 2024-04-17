@@ -325,8 +325,10 @@ const TecsList = styled.div`
     border-radius: 14px;
 
     span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-size: 2.5rem;
-        text-align: center;
         .icon{
             cursor: pointer;
             transition: all 0.3s ease;

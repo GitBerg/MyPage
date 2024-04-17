@@ -8,10 +8,3 @@ body{
 *::-webkit-scrollbar {
     display: none;
   }
-
-
-  @media (max-width: 670px) {
-    body{
-       overflow: hidden;
-    }
-   }

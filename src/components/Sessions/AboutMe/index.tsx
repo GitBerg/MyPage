@@ -19,6 +19,7 @@ export default function AboutMeContainer() {
 
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
         if(latest >= 0.15){
+            console.log(latest)
             setShowInfos(true)
             setShowNav(true)
         }else{
