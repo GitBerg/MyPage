@@ -140,6 +140,17 @@ overflow: hidden;
             }
         }
     }
+
+    @media (max-width: 500px){
+        padding-top: 30px;
+        .content{
+            height: 60%;
+            margin-top: 20px;
+            .info-list{
+                display: none;
+            }
+        }
+    }
 `
 
 
@@ -251,6 +262,29 @@ const Card = styled.div`
                 fill: rgb(21 154 156 / 100%);
             }
         }
+    }
+
+
+    @media (max-width: 500px){
+        width: 100%;
+        #description{
+            width: 100%;
+            height: 120px;
+            bottom: 30px;
+            padding: 0 10px;
+            box-sizing: border-box;
+            p{
+                position: relative;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                 overflow: hidden;
+                -webkit-box-orient: vertical; 
+                text-align: justify;
+                font-size: 0.8rem;
+                padding: 0;
+            }
+        }
+        
     }
 `
 
