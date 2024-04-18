@@ -125,9 +125,6 @@ position: relative;
         width: 100%;
         .title{
             width: 70%;
-            span{
-                    font-size: 4.5rem;
-                }
             h1{
                 font-size: 2rem;
             }
@@ -142,7 +139,7 @@ position: relative;
         width: 100vw;
         .title{
             left: 0px;
-            bottom: 90px;
+            bottom: 95px;
             width: 100%;
             z-index: 1;
             text-align: center;
@@ -150,12 +147,12 @@ position: relative;
                 font-size: 1.4rem;
             }
             span{
-                margin-bottom: 15px;
+                margin-bottom: 20px;
             }
             .initial{
               font-size: 1.2rem;
               position: relative;
-              top: 8px;
+              top: 11px;
             }
             h2{
                 div{
