@@ -38,6 +38,8 @@ position: relative;
          .initial{
               font-size: 1.5rem;
               color: #002323;
+              display: flex;
+              align-items: center;
             }
         h1{
             text-align: center;
@@ -58,10 +60,10 @@ position: relative;
             justify-content: center;
             margin-top: 10px;
             .typical{
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #8269AB;
-        }
+                font-size: 2.5rem;
+                font-weight: 800;
+                color: #8269AB;
+            }
         .line{
            margin: 0px;
          }
@@ -134,19 +136,26 @@ position: relative;
 }
 
 @media (max-width: 500px) {
+    height: calc(100vh - 20px);
     .banner{
         overflow: hidden;
         width: 100vw;
         .title{
             left: 0px;
+            bottom: 90px;
             width: 100%;
             z-index: 1;
             text-align: center;
             p{
                 font-size: 1.4rem;
             }
+            span{
+                margin-bottom: 15px;
+            }
             .initial{
               font-size: 1.2rem;
+              position: relative;
+              top: 8px;
             }
             h2{
                 div{
@@ -168,6 +177,10 @@ position: relative;
                 opacity: 0.4;
             }
         }
+    }
+
+    .scrollDown{
+        bottom: 30px;
     }
 }
 `

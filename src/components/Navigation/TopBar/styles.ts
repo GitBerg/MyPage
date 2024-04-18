@@ -167,6 +167,10 @@ export const Container = styled.nav`
             transition: all 0.5s ease;
         }
 }
+
+@media (max-width: 500px){
+    min-height: 100px;
+}
 `
 
 export const Menu = styled.ul`
@@ -177,9 +181,9 @@ export const Menu = styled.ul`
     opacity: 0;
     flex-direction: column;
     width: 100vw;
-    height:calc(100% - 70px);
+    height:calc(100% - 100px);
     position: fixed;
-    top: 70px;
+    top: 100px;
     background-color: rgb(0 0 0/ 80%);
     z-index: 1000000000000000;
     overflow: hidden;
