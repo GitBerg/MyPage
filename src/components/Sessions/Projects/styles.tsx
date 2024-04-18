@@ -352,6 +352,7 @@ const Card = styled.div`
         #btns{
         height: 10%;
     }
+}
 `
 
 const ProjectList = styled.ul`

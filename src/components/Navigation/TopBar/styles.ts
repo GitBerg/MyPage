@@ -181,7 +181,7 @@ export const Menu = styled.ul`
     opacity: 0;
     flex-direction: column;
     width: 100vw;
-    height:calc(100% - 120px);
+    height:calc(100% - 80px);
     position: fixed;
     top: 80px;
     background-color: rgb(0 0 0/ 80%);
