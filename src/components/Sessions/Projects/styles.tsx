@@ -144,8 +144,11 @@ overflow: hidden;
 
     @media (max-width: 500px){
         padding-top: 10px;
+        h2{
+            margin-bottom: 0;
+        }
         .content{
-            height: 75%;
+            height: 80%;
             margin-top: 20px;
             flex-direction: column;
             border: 0;
@@ -198,6 +201,7 @@ overflow: hidden;
                     height: 40px;
                     justify-content: center;
                     align-items: center;
+                    margin-top: 10px;
                 }
             }
         }
@@ -218,31 +222,34 @@ const Card = styled.div`
     flex-direction: column;
     overflow: hidden;
     position: relative;
-
-    #img{
-    width: 100%;
-    height: 70%;
-    object-fit: fill;
-    object-position: left center;
-    position: absolute;
-    opacity: 0;
-    transition: all 0.6s ease;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    &.active{
-        opacity: 1;
+    .imgs{
+        display: relative;
+        width: 100%;
+        height: 70%;
+        #img{
+        width: 100%;
+        height: 70%;
+        object-fit: fill;
+        object-position: left center;
+        position: absolute;
+        opacity: 0;
+        transition: all 0.6s ease;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        &.active{
+            opacity: 1;
+        }
     }
     }
-  
     #description{
         height: 24%;
         padding: 0 20px;
         color: rgb(21, 154, 156);
         width: 95%;
         overflow: hidden;
-        position: absolute;
-        bottom: 40px;
+        display: block;
         h3{
-            margin: 10px 0;
+            margin-top: 5px;
+            margin-bottom: 10px;
             text-align: center;
             font-size: 1.5rem;
         }
@@ -260,8 +267,6 @@ const Card = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: absolute;
-        bottom: 0;
         span{
             width: 100%;
             height: 100%;
@@ -319,12 +324,20 @@ const Card = styled.div`
     @media (max-width: 500px){
         width: 100%;
         height: 70%;
+        .imgs{
+            height: 65%;
+            #img{
+                height: 65%;
+            }
+        }
         #description{
             width: 100%;
-            height: 120px;
-            bottom: 25px;
+            height: 25%;
             padding: 0 10px;
             box-sizing: border-box;
+            h3{
+                margin: 3px 0;
+            }
             p{
                 position: relative;
                 display: -webkit-box;
@@ -336,7 +349,8 @@ const Card = styled.div`
                 padding: 0;
             }
         }
-        
+        #btns{
+        height: 10%;
     }
 `
 
@@ -537,7 +551,7 @@ export const MyProjects = ({ showPage }: { showPage: boolean }) => {
                             <MdNavigateBefore className="icon" onClick={handlePreviousImage} />
                             <MdNavigateNext className="icon" onClick={handleNextImage} />
                         </div>
-
+                        <div className="imgs">
                         {
                             currentProject.imgs.map((img, index) => {
                                 return (
@@ -545,7 +559,7 @@ export const MyProjects = ({ showPage }: { showPage: boolean }) => {
                                 )
                             })
                         }
-
+                        </div>
                         <div id="description">
                             <h3>{currentProject.name}</h3>
                             <p>{currentProject.description}</p>
