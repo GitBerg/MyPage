@@ -169,7 +169,7 @@ export const Container = styled.nav`
 }
 
 @media (max-width: 500px){
-    min-height: 80px;
+    min-height: 70px;
 }
 `
 
@@ -181,9 +181,9 @@ export const Menu = styled.ul`
     opacity: 0;
     flex-direction: column;
     width: 100vw;
-    height:calc(100% - 80px);
+    height:calc(100% - 70px);
     position: fixed;
-    top: 80px;
+    top: 70px;
     background-color: rgb(0 0 0/ 80%);
     z-index: 1000000000000000;
     overflow: hidden;

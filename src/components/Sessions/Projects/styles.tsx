@@ -126,7 +126,6 @@ overflow: hidden;
 
     @media (max-width: 1024px) {
         h2{
-            margin-top: 80px;
             font-size: 3rem;
             margin-bottom: 15px;
         }
@@ -145,6 +144,8 @@ overflow: hidden;
     @media (max-width: 500px){
         padding-top: 10px;
         h2{
+            margin-top: 65px;
+            font-size: 2.5rem;
             margin-bottom: 0;
         }
         .content{
