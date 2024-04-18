@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styled, { keyframes } from "styled-components";
 import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
+import { PiDotFill } from "react-icons/pi";
 
 import { RiJavascriptFill } from "react-icons/ri";
 import { SiExpo, SiStyledcomponents, SiPrisma, SiBulma } from "react-icons/si";
@@ -142,12 +143,62 @@ overflow: hidden;
     }
 
     @media (max-width: 500px){
-        padding-top: 30px;
+        padding-top: 10px;
         .content{
-            height: 60%;
+            height: 75%;
             margin-top: 20px;
+            flex-direction: column;
+            border: 0;
             .info-list{
-                display: none;
+                height: 30%;
+                width: 100%;
+                background-color: #F6F6F6;         
+                ul{
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: row;
+                    height: 50px;
+                    box-sizing: border-box;
+                    padding: 5px 5px;
+                    li{
+                        background-color: #F6F6F6;
+                        height: 100%;
+                        width: 40px;
+                        padding: 0;
+                        border: 0;
+                        position: relative;
+                        p{
+                            display: none;
+                        }
+                        .mobile-dot{
+                            display: block;
+                            position: absolute;
+                            width: 30px;
+                            height: 30px;
+                            color: #000000;
+                        }
+                        &.active{
+                            &::before{
+                                content: '';
+                                animation: none;
+                                width: 0;
+                                height: 0;
+                            }
+                            .mobile-dot{
+                                color: rgb(21, 154, 156);
+                            }
+                        }
+                    }
+
+                }
+                .icon-names{
+                    position: relative;
+                    width: 100%;
+                    display: flex;
+                    height: 40px;
+                    justify-content: center;
+                    align-items: center;
+                }
             }
         }
     }
@@ -267,10 +318,11 @@ const Card = styled.div`
 
     @media (max-width: 500px){
         width: 100%;
+        height: 70%;
         #description{
             width: 100%;
             height: 120px;
-            bottom: 30px;
+            bottom: 25px;
             padding: 0 10px;
             box-sizing: border-box;
             p{
@@ -302,6 +354,9 @@ const ProjectList = styled.ul`
     }
 
     li{
+        .mobile-dot{
+            display: none;
+        }
         width: 100%;
         display: flex;
         justify-content: center;
@@ -372,6 +427,15 @@ const TecsList = styled.div`
             }
         }
     }
+
+    @media (max-width: 500px){
+        width: 100%;
+        display: flex;
+        margin-top: 20px;
+        justify-content: space-evenly;
+        background-color: #F6F6F6;
+    }
+
 `
 
 export const MyProjects = ({ showPage }: { showPage: boolean }) => {
@@ -495,7 +559,7 @@ export const MyProjects = ({ showPage }: { showPage: boolean }) => {
                         <ProjectList>
                             {
                                 Object.values(database).map((project, index) => [
-                                    <li key={project.name} className={currentProject.name === project.name ? "active" : ""} onClick={() => handleSetCurrentProject(project, index)}>{project.name}</li>
+                                    <li key={project.name} className={currentProject.name === project.name ? "active" : ""} onClick={() => handleSetCurrentProject(project, index)}><p>{project.name}</p><PiDotFill className="mobile-dot"/></li>
                                 ])
 
                             }
@@ -506,11 +570,13 @@ export const MyProjects = ({ showPage }: { showPage: boolean }) => {
                                 <span key={tec}>{tecs[tec as keyof typeof tecs]}</span>
                             ))}
                         </TecsList>
+                        <div className="icon-names">
                         {
                             currentProject.tecs.map( tec => (
                                 <span key={tec} className={`icon-name${hoverIcon===tec?" active":""}`}>{tec}</span>
                             ))
                         }
+                        </div>
                     </div>
                 </motion.div>
             }
