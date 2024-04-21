@@ -364,6 +364,7 @@ const ProjectList = styled.ul`
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
     h2{
         text-align: center;
         margin-bottom: 25px;
@@ -375,9 +376,9 @@ const ProjectList = styled.ul`
         }
         width: 100%;
         display: flex;
+        height: calc(100% / 4);
         justify-content: center;
         align-items: center;
-        padding: 20px 0;
         font-size: 1.4rem;
         font-weight: 600;
         color: #f4f4f4;
