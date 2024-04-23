@@ -102,8 +102,8 @@ span{
         align-items: center;
         align-self: center;
         .img{
-        width:auto;
-        height: auto;
+        width:250px;
+        height: 250px;
         border-radius: 50%;
         border: 3px solid #159A9C ;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
