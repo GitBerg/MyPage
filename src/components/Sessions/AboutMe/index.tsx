@@ -44,7 +44,7 @@ export default function AboutMeContainer() {
                     initial={{ opacity: 0, x: 75 }}
                     animate={{ opacity: 1, x: 0 }} 
                     transition={{ delay: 0.25, duration: 0.6 }} className="image">
-                    <Image className="img" width={0} height={0} src={'/foto_perfil.webp'} alt="My profile photo"/>
+                    <Image className="img" width={0} height={0} src={img} alt="My profile photo"/>
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, x: -75 }}
