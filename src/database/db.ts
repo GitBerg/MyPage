@@ -1,17 +1,17 @@
-import yelp from "../images/yelpcamp/yelpcamp1.png";
-import yelp2 from "../images/yelpcamp/yelpcamp2.png";
-import yelp3 from "../images/yelpcamp/yelpcamp3.png";
-import ever from "../images/evernote/ever1.png";
-import ever2 from "../images/evernote/ever2.png";
-import ever3 from "../images/evernote/ever3.png";
-import fc1 from "../images/food-commerce/fc1.png";
-import fc2 from "../images/food-commerce/fc2.png";
-import fc3 from "../images/food-commerce/fc3.png";
-import fc4 from "../images/food-commerce/fc4.png";
-import op1 from "../images/order-app/op1.png";
-import op2 from "../images/order-app/op2.png";
-import op3 from "../images/order-app/op3.png";
-import op4 from "../images/order-app/op4.png";
+import yelp from "public/yelpcamp/yelpcamp1.png";
+import yelp2 from "public/yelpcamp/yelpcamp2.png";
+import yelp3 from "public/yelpcamp/yelpcamp3.png";
+import ever from "public/evernote/ever1.png";
+import ever2 from "public/evernote/ever2.png";
+import ever3 from "public/evernote/ever3.png";
+import fc1 from "public/food-commerce/fc1.png";
+import fc2 from "public/food-commerce/fc2.png";
+import fc3 from "public/food-commerce/fc3.png";
+import fc4 from "public/food-commerce/fc4.png";
+import op1 from "public/order-app/op1.png";
+import op2 from "public/order-app/op2.png";
+import op3 from "public/order-app/op3.png";
+import op4 from "public/order-app/op4.png";
 
 export const database = {
     "yelpcamp": { 

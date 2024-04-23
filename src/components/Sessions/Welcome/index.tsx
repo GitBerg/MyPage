@@ -3,7 +3,7 @@
 import TopBar from "@/components/Navigation/TopBar";
 import { Container } from "./styles";
 import Image from "next/image";
-import img from '../../../images/banner_img.webp';
+import img from 'public/banner_img.webp';
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import TypicalAnimation from "@/components/TypicalAnimation";
 import ScrollDownAlert from "@/components/ScrollDownAlert";
