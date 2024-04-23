@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Container } from "./styles";
-import img from 'public/foto_perfil.webp';
+import img from '../../../images/foto_perfil.webp';
 
 import { RiJavascriptFill } from "react-icons/ri";
 import { BiLogoTypescript, BiLogoReact, BiLogoRedux,BiLogoHtml5, BiLogoCss3, BiLogoNodejs, BiLogoMongodb, BiLogoGit } from "react-icons/bi";
