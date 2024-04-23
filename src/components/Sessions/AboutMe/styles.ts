@@ -49,7 +49,6 @@ const gitFill = keyframes`
 export const Container = styled.section`
 background: #F6F6F6;
 width: 100%;
-height: 75vh;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -57,7 +56,8 @@ scroll-snap-align: start;
 box-sizing: border-box;
 position: relative;
 overflow: hidden;
-
+box-sizing: border-box;
+padding-top: 80px;
 span{
     width: 80%;
     height: 2px;
@@ -72,15 +72,14 @@ span{
     display: grid;
     width: 50%;
     height: 100%;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
     justify-items: center;
     align-items: center;
     gap: 20px;
-    padding: 20px;
+    flex-wrap: wrap;
     .card{
-        padding: 0 20px;
-        width: clamp(200px, 95%, 450px);
-        height: clamp(220px, 40%, 280px);
+        padding: 0 20px; 
+        box-sizing: border-box;
         h2{
             color: #159A9C;
             font-size: clamp(1.5rem, 2vw, 2.5rem); 
@@ -103,8 +102,8 @@ span{
         align-items: center;
         align-self: center;
         .img{
-        width: clamp(250px, 50%, 450px);
-        height: clamp(250px, 50%, 450px);
+        width:auto;
+        height: auto;
         border-radius: 50%;
         border: 3px solid #159A9C ;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
@@ -116,8 +115,6 @@ span{
     }
 
     .skills{
-        width: clamp(200px, 70%, 300px);
-        height: clamp(140px, 60%, 150px);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -199,39 +196,32 @@ span{
     
 }
 
+@media (max-width: 1240px) {
+    .grid{
+        width: 70%;
+    }
+}
 
+@media (max-width: 900px) {
+    .grid{
+        width: 90%;
+    }
+}
 
-@media (max-width: 1440px) {
-    height: 70vh;
-    padding-top: 90px;
-        .grid{
-            width: 75%;
-            height: 100%;
-            gap: 10px 20px;
+@media (max-width: 768px){
+    .grid{
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 688px){
+    .grid{
+        gap: 30px;
+        .image{
+            order: -2;
         }
-}
+    }
 
-@media (max-width: 1024px) {
-        .grid{
-            .skills{
-                .icons{
-                    gap: 5px
-                }
-            }
-        }
 }
-
-@media (max-height: 900px) {
-    height: 75vh;
-}
-
-@media (max-height: 768px) {
-    height: 90vh;
-}
-
-@media (max-height: 600px) {
-    height: 100vh;
-}
-
 
 `

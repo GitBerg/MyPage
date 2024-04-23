@@ -86,26 +86,35 @@ overflow: hidden;
             gap: 3px;
             position: relative;
             overflow: hidden;
+            .icon-names{
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    display: flex;
+                    height: 40px;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 10px;
+                    .icon-name{
+                        position: absolute;
+                        text-align: center;
+                        font-weight: 600;
+                        font-size: 1.4rem;
+                        color: rgb(21, 154, 156); 
+                        opacity: 0;
+                        &.active{
+                            animation: ${fadeIn} 0.6s ease forwards;
+                        }
+
+                    }
+                }
             .tools-title{
                 font-size: 1.5rem;
                 color: rgb(21, 154, 156);
                 font-weight: 600;
             }
 
-            .icon-name{
-                position: absolute;
-                bottom: 10px;
-                font-weight: 600;
-                font-size: 1.4rem;
-                color: rgb(21, 154, 156); 
-                opacity: 0;
-                
-               
-                &.active{
-                    animation: ${fadeIn} 0.6s ease forwards;
-                }
-
-            }
+            
         }
     }
 
@@ -133,9 +142,11 @@ overflow: hidden;
             width: 95%;
             height:75%;
             .info-list{
-                .icon-name{
-                    font-size: 1.2rem;
-                    bottom: 3px;
+                .icon-names{
+                    .icon-name{
+                        font-size: 1rem;
+                        bottom: 3px;
+                    }
                 }
             }
         }
