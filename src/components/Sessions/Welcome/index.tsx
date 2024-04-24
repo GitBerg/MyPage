@@ -3,6 +3,7 @@
 import TopBar from "@/components/Navigation/TopBar";
 import { Container } from "./styles";
 import Image from "next/image";
+import img from "../../../../public/banner_img.webp"
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import TypicalAnimation from "@/components/TypicalAnimation";
 import ScrollDownAlert from "@/components/ScrollDownAlert";
@@ -67,7 +68,7 @@ export default function WelcomeContainer() {
                 initial="hidden"
                 animate="visible"
                 >
-                    <Image className="img" loading="lazy" src="/banner_img.webp" width={450} height={700} alt="painted young guy" />
+                    <Image className="img" loading="lazy" src={img} width={450} height={700} alt="painted young guy" />
                 </motion.div>
             </div>
             <ScrollDownAlert showScroll={showScroll}/>

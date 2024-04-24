@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Container } from "./styles";
-import img from 'public/foto_perfil.webp';
+import img from '../../../../public/foto_perfil.webp';
 
 import { RiJavascriptFill } from "react-icons/ri";
 import { BiLogoTypescript, BiLogoReact, BiLogoRedux,BiLogoHtml5, BiLogoCss3, BiLogoNodejs, BiLogoMongodb, BiLogoGit } from "react-icons/bi";
@@ -44,7 +44,7 @@ export default function AboutMeContainer() {
                     initial={{ opacity: 0, x: 75 }}
                     animate={{ opacity: 1, x: 0 }} 
                     transition={{ delay: 0.25, duration: 0.6 }} className="image">
-                    <Image className="img" loading="lazy" width={250} height={250} src="/foto_perfil.webp" alt="My profile photo"/>
+                    <Image className="img" loading="lazy" width={250} height={250} src={img} alt="My profile photo"/>
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0, x: -75 }}
