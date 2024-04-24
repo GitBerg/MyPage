@@ -2,3 +2,11 @@
   path = "/*"
   excludedPath = "/public/*"
   function = "common"
+
+[build]
+  command = "npm run build"
+  functions = "lambda"
+
+# Plugins
+[[plugins]]
+  package = "netlify-plugin-cypress"
