@@ -120,7 +120,7 @@ position: relative;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 880px) {
     .banner{
         width: 100%;
         .title{
@@ -132,7 +132,7 @@ position: relative;
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     height: calc(100vh - 20px);
     .banner{
         overflow: hidden;

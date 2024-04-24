@@ -57,13 +57,14 @@ font-family: Roboto;
 position: relative;
 z-index: 1;
 overflow: hidden;
+box-sizing: border-box;
+padding-top: 50px;
 
 
     h2{
         font-size: 3rem;
         color:rgb(21, 154, 156);
-        margin-top: 0;
-        margin: 25px 0;
+        margin-bottom: 40px;
     }
 
     .content{
@@ -122,8 +123,6 @@ overflow: hidden;
     @media (max-width: 1440px) {
         height: 100vh;
         h2{
-            margin-top: 80px;
-            margin-bottom: 40px;
             font-size: 3rem;
         }
         .content{
@@ -136,7 +135,6 @@ overflow: hidden;
     @media (max-width: 1024px) {
         h2{
             font-size: 3rem;
-            margin-bottom: 15px;
         }
         .content{
             width: 95%;
@@ -155,9 +153,7 @@ overflow: hidden;
     @media (max-width: 500px){
         padding-top: 10px;
         h2{
-            margin-top: 65px;
             font-size: 2.5rem;
-            margin-bottom: 0;
         }
         .content{
             height: 80%;
@@ -569,7 +565,7 @@ export const MyProjects = ({ showPage }: { showPage: boolean }) => {
                         {
                             currentProject.imgs.map((img, index) => {
                                 return (
-                                    <Image key={index} id={`img`} className={currentImage === img ? "active" : ""} width={0} height={0} src={img} alt="project photo" />
+                                    <Image key={index} id={`img`} className={currentImage === img ? "active" : ""} width={900} height={450} src={img} alt="project photo" />
                                 )
                             })
                         }

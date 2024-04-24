@@ -58,6 +58,7 @@ position: relative;
 overflow: hidden;
 box-sizing: border-box;
 padding-top: 80px;
+min-height: 60vh;
 span{
     width: 80%;
     height: 2px;
