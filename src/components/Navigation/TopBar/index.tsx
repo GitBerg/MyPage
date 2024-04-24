@@ -28,7 +28,7 @@ export default function TopBar() {
                     <a href="https://github.com/Gitberg" title="GitHub" target="_blank" className="icon"><AiFillGithub /></a>
                     <a href="https://br.linkedin.com/in/gutembergfilho" title="LinkedIn" target="_blank" className="icon"><AiFillLinkedin /></a>
                     <a href="https://www.instagram.com/guttos_f/" title="Instagram" target="_blank" className="icon"><AiOutlineInstagram /></a>
-                    <a href="https://drive.google.com/uc?export=download&id=1dpz23xoxjnCUY54wD1lDWcfgKC8d7KW9" title="Download CV" className="icon"><AiOutlinePaperClip /></a>
+                    <a href="https://drive.google.com/uc?export=download&id=1GD1F3Ip2pU08PICIOL0h4lxdwd5UEsvy" title="Download CV" className="icon"><AiOutlinePaperClip /></a>
                 </div>
                 <span onClick={() => setShowMenu(prev => !prev)} className={`menu ${showMenu ? "open" : ""}`}><AiOutlineMenu id="open-icon" /><AiOutlineClose id="close-icon" /></span>
             </Container>
