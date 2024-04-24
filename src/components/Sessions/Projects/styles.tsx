@@ -565,7 +565,7 @@ export const MyProjects = ({ showPage }: { showPage: boolean }) => {
                         {
                             currentProject.imgs.map((img, index) => {
                                 return (
-                                    <Image key={index} id={`img`} className={currentImage === img ? "active" : ""} width={900} height={450} src={img} alt="project photo" />
+                                    <Image key={index} id={`img`} loading="lazy" className={currentImage === img ? "active" : ""} width={900} height={450} src={img} alt="project photo" />
                                 )
                             })
                         }

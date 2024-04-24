@@ -67,7 +67,7 @@ export default function WelcomeContainer() {
                 initial="hidden"
                 animate="visible"
                 >
-                    <Image className="img" src="/banner_img.webp" width={450} height={700} alt="painted young guy" />
+                    <Image className="img" loading="lazy" src="/banner_img.webp" width={450} height={700} alt="painted young guy" />
                 </motion.div>
             </div>
             <ScrollDownAlert showScroll={showScroll}/>
